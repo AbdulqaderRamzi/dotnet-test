@@ -13,6 +13,5 @@ C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.DataAccess\obj\Debug\net8.0
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.DataAccess\obj\Debug\net8.0\refint\CRUDHistory.DataAccess.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.DataAccess\obj\Debug\net8.0\CRUDHistory.DataAccess.pdb
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.DataAccess\obj\Debug\net8.0\ref\CRUDHistory.DataAccess.dll
-C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.DataAccess\obj\Debug\net8.0\CRUDHistory.DataAccess.sourcelink.json
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.DataAccess\bin\Debug\net8.0\CRUDHistory.DataAccess.runtimeconfig.json
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.DataAccess\obj\Debug\net8.0\CRUDHistory.DataAccess.genruntimeconfig.cache

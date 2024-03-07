@@ -115,7 +115,6 @@ C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\CRUDHis
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\CRUDHistory.Models.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\CRUDHistory.DataAccess.pdb
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\CRUDHistory.Models.pdb
-C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\CRUDHistoryWeb.sourcelink.json
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Build.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Build.Framework.dll

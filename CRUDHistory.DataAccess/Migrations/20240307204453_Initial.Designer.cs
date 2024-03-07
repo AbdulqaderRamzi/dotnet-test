@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUDHistory.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240307170409_Initial")]
+    [Migration("20240307204453_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -58,7 +58,7 @@ namespace CRUDHistory.DataAccess.Migrations
                         {
                             Id = 1,
                             Career = "",
-                            DateTime = new DateTime(2024, 3, 7, 20, 4, 7, 513, DateTimeKind.Local).AddTicks(9156),
+                            DateTime = new DateTime(2024, 3, 7, 23, 44, 51, 463, DateTimeKind.Local).AddTicks(9876),
                             Email = "",
                             Name = "Hosam",
                             Salary = 200
@@ -67,7 +67,7 @@ namespace CRUDHistory.DataAccess.Migrations
                         {
                             Id = 2,
                             Career = "",
-                            DateTime = new DateTime(2024, 3, 7, 20, 4, 7, 513, DateTimeKind.Local).AddTicks(9187),
+                            DateTime = new DateTime(2024, 3, 7, 23, 44, 51, 463, DateTimeKind.Local).AddTicks(9892),
                             Email = "",
                             Name = "Khaled",
                             Salary = 150

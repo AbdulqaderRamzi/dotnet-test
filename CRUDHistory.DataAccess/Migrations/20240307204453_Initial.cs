@@ -61,8 +61,8 @@ namespace CRUDHistory.DataAccess.Migrations
                 columns: new[] { "Id", "Career", "DateTime", "Email", "Name", "Salary" },
                 values: new object[,]
                 {
-                    { 1, "", new DateTime(2024, 3, 7, 20, 4, 7, 513, DateTimeKind.Local).AddTicks(9156), "", "Hosam", 200 },
-                    { 2, "", new DateTime(2024, 3, 7, 20, 4, 7, 513, DateTimeKind.Local).AddTicks(9187), "", "Khaled", 150 }
+                    { 1, "", new DateTime(2024, 3, 7, 23, 44, 51, 463, DateTimeKind.Local).AddTicks(9876), "", "Hosam", 200 },
+                    { 2, "", new DateTime(2024, 3, 7, 23, 44, 51, 463, DateTimeKind.Local).AddTicks(9892), "", "Khaled", 150 }
                 });
         }
 

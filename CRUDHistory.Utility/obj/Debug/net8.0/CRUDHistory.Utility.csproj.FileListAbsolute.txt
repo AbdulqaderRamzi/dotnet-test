@@ -1,0 +1,12 @@
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\CRUDHistory.Utility.deps.json
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\CRUDHistory.Utility.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\CRUDHistory.Utility.pdb
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\obj\Debug\net8.0\CRUDHistory.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\obj\Debug\net8.0\CRUDHistory.Utility.AssemblyInfoInputs.cache
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\obj\Debug\net8.0\CRUDHistory.Utility.AssemblyInfo.cs
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\obj\Debug\net8.0\CRUDHistory.Utility.csproj.CoreCompileInputs.cache
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\obj\Debug\net8.0\CRUDHistory.Utility.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\obj\Debug\net8.0\refint\CRUDHistory.Utility.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\obj\Debug\net8.0\CRUDHistory.Utility.pdb
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\obj\Debug\net8.0\ref\CRUDHistory.Utility.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\obj\Debug\net8.0\CRUDHistory.Utility.sourcelink.json

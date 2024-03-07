@@ -1,0 +1,91 @@
+﻿@model Employee
+<form method="POST">
+    <h2 class="mb-2 text-gray-800">Employee Information</h2>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label asp-for="Name" class="text-gray-800"></label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary" class="text-gray-800"></label>
+                <div class="input-group">
+                    <input asp-for="Salary" class="form-control">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">KD</span>
+                    </div>
+                </div>
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="from-group">
+                <label asp-for="Career" class="text-gray-800"></label>
+                <input asp-for="Career" class="form-control">
+                <span asp-validation-for="Career" class="text-danger"></span>
+            </div>
+            <div class="from-group">
+                <label asp-for="Email" class="text-gray-800"></label>
+                <input asp-for="Email" class="form-control">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="from-group">
+                <label class="text-gray-800">Created Time</label>
+                <input class="form-control" value="@Model.DateTime.ToString("MMM-dd-yy hh:mm tt")" readonly>
+            </div>
+            <!-- Add more form fields as needed -->
+        </div>
+        <div class="col-lg-6">
+            <div class="row mx-5">
+                <div class="form-group mr-lg-5">
+                    <label class="text-gray-800">Gender:</label><br>
+                    <div class="form-check">
+                        <input class="form-check-input text-gray-800" type="radio" name="gender" id="male" value="male">
+                        <label class="form-check-label text-gray-800" for="male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input text-gray-800" type="radio" name="gender" id="female" value="female">
+                        <label class="form-check-label text-gray-800" for="female">Female</label>
+                    </div>
+                </div>
+                <div class="form-group mr-lg-5">
+                    <label class="text-gray-800">Status:</label><br>
+                    <div class="form-check">
+                        <input class="form-check-input text-gray-800" type="radio" name="gender" id="male" value="male">
+                        <label class="form-check-label text-gray-800" for="male">Active</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input text-gray-800" type="radio" name="gender" id="female" value="female">
+                        <label class="form-check-label text-gray-800" for="female">Inactive</label>
+                    </div>
+                </div>
+                <!-- Add more radio buttons as needed -->
+                <div class="form-group">
+                    <label class="text-gray-800">Languages:</label><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="hobby1" value="option1">
+                        <label class="form-check-label text-gray-800" for="hobby1">Arabic</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="hobby2" value="option2">
+                        <label class="form-check-label text-gray-800" for="hobby2">English</label>
+                    </div>
+                    <!-- Add more checkboxes as needed -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <a asp-controller="Employee" asp-action="Index" class="btn btn-dark ml-4 mt-5">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            <button type="submit" class="btn btn-success ml-4 mt-5">
+                <i class="fas fa-solid fa-check"></i> Create
+            </button>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}

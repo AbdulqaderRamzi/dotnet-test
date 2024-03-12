@@ -1,0 +1,6 @@
+﻿.vs
+.idea
+.obj
+libman.json
+global.json
+CRUDHistory.sln.DotSettings.user

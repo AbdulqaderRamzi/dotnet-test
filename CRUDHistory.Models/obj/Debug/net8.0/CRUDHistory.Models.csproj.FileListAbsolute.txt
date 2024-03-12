@@ -9,3 +9,4 @@ C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Models\obj\Debug\net8.0\CRU
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Models\obj\Debug\net8.0\refint\CRUDHistory.Models.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Models\obj\Debug\net8.0\CRUDHistory.Models.pdb
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Models\obj\Debug\net8.0\ref\CRUDHistory.Models.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Models\obj\Debug\net8.0\CRUDHistory.Models.sourcelink.json

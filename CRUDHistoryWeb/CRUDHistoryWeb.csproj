@@ -36,12 +36,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Areas\Employee\Controllers" />
+      <AdditionalFiles Include="Areas\Admin\Views\Employee\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Home\Index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
-      <AdditionalFiles Include="Areas\Admin\Views\Employee\Index.cshtml" />
-      <AdditionalFiles Include="Areas\Admin\Views\Home\Index.cshtml" />
+      <Folder Include="Areas\Employee\Conrollers\" />
     </ItemGroup>
 
 </Project>

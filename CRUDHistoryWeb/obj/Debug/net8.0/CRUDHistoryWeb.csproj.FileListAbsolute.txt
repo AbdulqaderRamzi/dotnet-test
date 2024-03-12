@@ -242,3 +242,4 @@ C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\runtime
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\CRUDHistoryWeb.sourcelink.json

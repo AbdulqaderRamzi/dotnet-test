@@ -1,4 +1,4 @@
-﻿using CRUDHistory.Models.Models;
+﻿using CRUDHistory.Models;
 
 namespace CRUDHistory.DataAccess.Repository.IRepository;
 

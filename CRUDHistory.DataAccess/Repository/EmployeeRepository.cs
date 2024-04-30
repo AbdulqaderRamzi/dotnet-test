@@ -1,6 +1,6 @@
 ﻿using CRUDHistory.DataAccess.Data;
 using CRUDHistory.DataAccess.Repository.IRepository;
-using CRUDHistory.Models.Models;
+using CRUDHistory.Models;
 
 namespace CRUDHistory.DataAccess.Repository;
 

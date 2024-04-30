@@ -42,6 +42,7 @@
 
     <ItemGroup>
       <Folder Include="Areas\Employee\Conrollers\" />
+      <Folder Include="wwwroot\images\employees" />
     </ItemGroup>
 
 </Project>

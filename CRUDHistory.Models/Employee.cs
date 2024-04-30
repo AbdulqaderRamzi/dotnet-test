@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace CRUDHistory.Models.Models;
+namespace CRUDHistory.Models;
 
 public class Employee{
     [Key]
@@ -17,4 +19,11 @@ public class Employee{
     public string Email{ get; set; } = string.Empty;
     [DisplayName("Date")]
     public DateTime DateTime{ get; set; } = DateTime.Now;
+
+    public string imageUrl{ get; set; } = string.Empty;
+    [DisplayName("Tags")]
+    public int TagId{ get; set; }
+    [ForeignKey("TagId")]
+    [ValidateNever]
+    public Tag Tag{ get; set; }
 }

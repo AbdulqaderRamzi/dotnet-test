@@ -1,5 +1,5 @@
 using System.Diagnostics;
-using CRUDHistory.Models.Models;
+using CRUDHistory.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CRUDHistoryWeb.Areas.Admin.Controllers;

@@ -1,6 +1,7 @@
 ﻿namespace CRUDHistory.DataAccess.Repository.IRepository;
 public interface IUnitOfWork{
     IEmployeeRepository Employee { get; }
-    ISolutionRepository Solution { get; }
+    IProductRepository Product { get; }
+    ITagRepository Tag{ get; }
     void Save();
 }

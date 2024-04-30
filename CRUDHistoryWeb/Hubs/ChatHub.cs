@@ -1,4 +1,4 @@
-﻿using CRUDHistory.Models.Models;
+﻿using CRUDHistory.Models;
 using Microsoft.AspNetCore.SignalR;
 
 namespace CRUDHistoryWeb.Hubs;

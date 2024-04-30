@@ -243,3 +243,6 @@ C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\runtime
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\CRUDHistoryWeb.sourcelink.json
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\CRUDHistoryWeb.MvcApplicationPartsAssemblyInfo.cs

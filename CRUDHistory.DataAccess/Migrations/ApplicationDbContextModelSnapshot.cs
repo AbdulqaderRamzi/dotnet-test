@@ -3,6 +3,7 @@ using System;
 using CRUDHistory.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -19,11 +20,15 @@ namespace CRUDHistory.DataAccess.Migrations
                 .HasAnnotation("ProductVersion", "8.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
+
             modelBuilder.Entity("CRUDHistory.Models.Models.Employee", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Career")
                         .IsRequired()
@@ -46,42 +51,39 @@ namespace CRUDHistory.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("int");
 
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("imageUrl")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Employees");
+                    b.HasIndex("TagId");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Career = "",
-                            DateTime = new DateTime(2024, 3, 7, 23, 44, 51, 463, DateTimeKind.Local).AddTicks(9876),
-                            Email = "",
-                            Name = "Hosam",
-                            Salary = 200
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Career = "",
-                            DateTime = new DateTime(2024, 3, 7, 23, 44, 51, 463, DateTimeKind.Local).AddTicks(9892),
-                            Email = "",
-                            Name = "Khaled",
-                            Salary = 150
-                        });
+                    b.ToTable("Employees");
                 });
 
-            modelBuilder.Entity("CRUDHistory.Models.Models.Solution", b =>
+            modelBuilder.Entity("CRUDHistory.Models.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Price")
+                    b.Property<int?>("Price")
                         .HasColumnType("int");
 
                     b.Property<string>("Type")
@@ -90,7 +92,51 @@ namespace CRUDHistory.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Solutions");
+                    b.HasIndex("EmployeeId");
+
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("CRUDHistory.Models.Models.Tag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tags");
+                });
+
+            modelBuilder.Entity("CRUDHistory.Models.Models.Employee", b =>
+                {
+                    b.HasOne("CRUDHistory.Models.Models.Tag", "Tag")
+                        .WithMany()
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Tag");
+                });
+
+            modelBuilder.Entity("CRUDHistory.Models.Models.Product", b =>
+                {
+                    b.HasOne("CRUDHistory.Models.Models.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Employee");
                 });
 #pragma warning restore 612, 618
         }

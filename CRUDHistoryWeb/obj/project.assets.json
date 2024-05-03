@@ -4384,6 +4384,19 @@
         "runtime": {
           "bin/placeholder/CRUDHistory.Models.dll": {}
         }
+      },
+      "CRUDHistory.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "CRUDHistory.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUDHistory.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUDHistory.Utility.dll": {}
+        }
       }
     }
   },
@@ -12760,12 +12773,18 @@
       "type": "project",
       "path": "../CRUDHistory.Models/CRUDHistory.Models.csproj",
       "msbuildProject": "../CRUDHistory.Models/CRUDHistory.Models.csproj"
+    },
+    "CRUDHistory.Utility/1.0.0": {
+      "type": "project",
+      "path": "../CRUDHistory.Utility/CRUDHistory.Utility.csproj",
+      "msbuildProject": "../CRUDHistory.Utility/CRUDHistory.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "CRUDHistory.DataAccess >= 1.0.0",
       "CRUDHistory.Models >= 1.0.0",
+      "CRUDHistory.Utility >= 1.0.0",
       "Microsoft.AspNetCore.SignalR.Client >= 8.0.1",
       "Microsoft.EntityFrameworkCore >= 8.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.1",
@@ -12805,6 +12824,9 @@
             },
             "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistory.Models\\CRUDHistory.Models.csproj": {
               "projectPath": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistory.Models\\CRUDHistory.Models.csproj"
+            },
+            "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistory.Utility\\CRUDHistory.Utility.csproj": {
+              "projectPath": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistory.Utility\\CRUDHistory.Utility.csproj"
             }
           }
         }

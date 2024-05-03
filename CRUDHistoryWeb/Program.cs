@@ -1,8 +1,10 @@
 using CRUDHistory.DataAccess.Data;
 using CRUDHistory.DataAccess.Repository;
 using CRUDHistory.DataAccess.Repository.IRepository;
+using CRUDHistory.Utility.SendingEmails;
 using CRUDHistoryWeb.Hubs;
 using Microsoft.EntityFrameworkCore;
+using CRUDHistory.Utility.SendingEmails;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +18,7 @@ builder.Services.AddCors(opt => {
             .AllowCredentials();
     });
 });
-    
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddSignalR();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

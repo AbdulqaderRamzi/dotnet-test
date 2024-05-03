@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\images\\employees\\10093464-27d7-4af1-a204-728ced01c1f1.jpg",
+      "PackagePath": "staticwebassets\\images\\employees\\10093464-27d7-4af1-a204-728ced01c1f1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\images\\employees\\bc31e96b-a068-4b9e-85c1-f707e60b301a.jpg",
+      "PackagePath": "staticwebassets\\images\\employees\\bc31e96b-a068-4b9e-85c1-f707e60b301a.jpg"
+    },
+    {
       "Id": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\img\\undraw_posting_photo.svg",
       "PackagePath": "staticwebassets\\img\\undraw_posting_photo.svg"
     },

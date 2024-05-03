@@ -1,5 +1,5 @@
 ﻿@model EmploteeVM
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
     <h2 class="mb-2 text-gray-800">Employee Information</h2>
     <input hidden asp-for="Employee.Id">
     <div class="row">
@@ -44,11 +44,11 @@
         </div>
         <div class="col-lg-6">
             <div class="profile-image">
-                <img src="" alt="" id="profile-pic">
+                <img src="@Model.Employee.imageUrl" alt="" id="profile-pic">
             </div>
             <div class="form-group form-upload">
-                <input type="file" id="file-input" accept="image/*">
-                <label for="file-input" class="btn-upload">Upload Image</label>
+                <input asp-for="Employee.imageUrl" name="file" type="file">
+                <label asp-for="Employee.imageUrl" class="btn-upload">Upload Image</label>
             </div>
             <div class="row mx-5">
                 <div class="form-group mr-lg-5">

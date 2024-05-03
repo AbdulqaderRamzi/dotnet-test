@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CRUDHistory.Models\CRUDHistory.Models.csproj" />
+    </ItemGroup>
+
 </Project>

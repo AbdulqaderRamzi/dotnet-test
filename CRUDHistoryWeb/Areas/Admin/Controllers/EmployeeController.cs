@@ -10,8 +10,12 @@ namespace CRUDHistoryWeb.Areas.Admin.Controllers;
 [Area("Admin")]
 public class EmployeeController : Controller{
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IWebHostEnvironment _webHostEnvironment;
 
-    public EmployeeController(IUnitOfWork unitOfWork) => _unitOfWork = unitOfWork;
+    public EmployeeController(IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment){
+        _unitOfWork = unitOfWork;
+        _webHostEnvironment = webHostEnvironment;
+    }
 
     public IActionResult Index(){
         var employees = _unitOfWork.Employee.GetAll().ToList();
@@ -32,7 +36,7 @@ public class EmployeeController : Controller{
     }
 
     [HttpPost]
-    public IActionResult Upsert(EmploteeVM employeeVm){
+    public IActionResult Upsert(EmploteeVM employeeVm, IFormFile? file){
         if (!ModelState.IsValid){
             employeeVm.TagList = _unitOfWork.Tag.GetAll()
                 .Select(u => new SelectListItem{
@@ -40,6 +44,16 @@ public class EmployeeController : Controller{
                     Value = u.Id.ToString()
                 });
             return View(employeeVm);
+        }
+        var wwwRootPath = _webHostEnvironment.WebRootPath;
+        if (file is not null){
+            var fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
+            var employeePath = Path.Combine(wwwRootPath, @"images\employees");
+            using (var fileStream = new FileStream(Path.Combine(employeePath, fileName), FileMode.Create)) {
+               file.CopyTo(fileStream);
+            }
+            //employeeVm.Employee.imageUrl = Path.Combine(employeePath, fileName);
+            employeeVm.Employee.imageUrl = @"images\employees\" + fileName;
         }
         employeeVm.Employee.Email = employeeVm.Employee.Email.ToLower();
         if (employeeVm.Employee.Id == 0){

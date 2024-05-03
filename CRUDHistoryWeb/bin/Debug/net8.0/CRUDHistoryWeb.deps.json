@@ -10,6 +10,7 @@
         "dependencies": {
           "CRUDHistory.DataAccess": "1.0.0",
           "CRUDHistory.Models": "1.0.0",
+          "CRUDHistory.Utility": "1.0.0",
           "Microsoft.AspNetCore.SignalR.Client": "8.0.1",
           "Microsoft.EntityFrameworkCore": "8.0.1",
           "Microsoft.EntityFrameworkCore.Design": "8.0.1",
@@ -2600,6 +2601,14 @@
         "runtime": {
           "CRUDHistory.Models.dll": {}
         }
+      },
+      "CRUDHistory.Utility/1.0.0": {
+        "dependencies": {
+          "CRUDHistory.Models": "1.0.0"
+        },
+        "runtime": {
+          "CRUDHistory.Utility.dll": {}
+        }
       }
     }
   },
@@ -4372,6 +4381,11 @@
       "sha512": ""
     },
     "CRUDHistory.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CRUDHistory.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

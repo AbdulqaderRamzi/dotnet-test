@@ -33,6 +33,7 @@
     <ItemGroup>
       <ProjectReference Include="..\CRUDHistory.DataAccess\CRUDHistory.DataAccess.csproj" />
       <ProjectReference Include="..\CRUDHistory.Models\CRUDHistory.Models.csproj" />
+      <ProjectReference Include="..\CRUDHistory.Utility\CRUDHistory.Utility.csproj" />
     </ItemGroup>
 
     <ItemGroup>

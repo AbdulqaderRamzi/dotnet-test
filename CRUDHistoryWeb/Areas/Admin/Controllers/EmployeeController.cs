@@ -33,7 +33,7 @@ public class EmployeeController : Controller{
                 _unitOfWork.Employee.Get(u => u.Id == id)
         };
         return View(employeeVm);
-    }
+    }   
 
     [HttpPost]
     public IActionResult Upsert(EmploteeVM employeeVm, IFormFile? file){
@@ -52,32 +52,60 @@ public class EmployeeController : Controller{
             using (var fileStream = new FileStream(Path.Combine(employeePath, fileName), FileMode.Create)) {
                file.CopyTo(fileStream);
             }
+            if (!string.IsNullOrEmpty(employeeVm.Employee.imageUrl)){
+                var oldImagePath = Path.Combine(wwwRootPath, employeeVm.Employee.imageUrl.TrimStart('\\'));
+                if (System.IO.File.Exists(oldImagePath))
+                    System.IO.File.Delete(oldImagePath);
+            }
             //employeeVm.Employee.imageUrl = Path.Combine(employeePath, fileName);
-            employeeVm.Employee.imageUrl = @"images\employees\" + fileName;
+            employeeVm.Employee.imageUrl = @"\images\employees\" + fileName;
         }
         employeeVm.Employee.Email = employeeVm.Employee.Email.ToLower();
         if (employeeVm.Employee.Id == 0){
             _unitOfWork.Employee.Add(employeeVm.Employee);
             TempData["success"] = "Employee was added successfully";
         }
-        else{
+        else {
             _unitOfWork.Employee.Update(employeeVm.Employee);
-            TempData["success"] = "Employee was updated successfully";
         }
         _unitOfWork.Save();
         return RedirectToAction(nameof(Index));
     }
 
-    /*public IActionResult Delete(int? id){
-        if (id is null or 0)
-            return NotFound();
+    
+    public IActionResult Delete(int? id){
+        var employee = _unitOfWork.Employee.Get(u  => u.Id == id);
+        if (!string.IsNullOrEmpty(employee.imageUrl)){
+            var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, employee.imageUrl.TrimStart('\\'));
+            if (System.IO.File.Exists(oldImagePath))
+                System.IO.File.Delete(oldImagePath);
+        }
+        _unitOfWork.Employee.Remove(employee);
+        _unitOfWork.Save();
+        TempData["success"] = "Employee deleted successfully";
+        return RedirectToAction(nameof(Index));
+    }
+
+ 
+    
+    /*[HttpDelete]
+    public IActionResult Delete(int? id){
         var employee = _unitOfWork.Employee.Get(u => u.Id == id);
+        if (!string.IsNullOrEmpty(employee.imageUrl)){
+            var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, employee.imageUrl.TrimStart('\\'));
+            if (System.IO.File.Exists(oldImagePath))
+                System.IO.File.Delete(oldImagePath);
+        }
+        _unitOfWork.Employee.Remove(employee);
+        _unitOfWork.Save();
+        TempData["success"] = "Employee was deleted successfully";
+        return RedirectToAction(nameof(Index));
     }*/
 
-    public IActionResult Delete(Employee employee){
+    /*public IActionResult Delete(Employee employee){
         _unitOfWork.Employee.Remove(employee);
         _unitOfWork.Save();
         TempData["success"] = "Employee is deleted successfully";
         return RedirectToAction(nameof(Index));
-    }
+    }*/
 }

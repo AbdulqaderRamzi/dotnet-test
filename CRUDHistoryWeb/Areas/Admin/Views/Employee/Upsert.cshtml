@@ -4,11 +4,11 @@
     <input hidden asp-for="Employee.Id">
     <div class="row">
         <div class="col-lg-6">
-            <div class="form-group">
-                <label asp-for="Employee.Name" class="text-gray-800"></label>
-                <input asp-for="Employee.Name" class="form-control">
-                <span asp-validation-for="Employee.Name" class="text-danger"></span>
-            </div>
+           <div class="form-group">
+               <label asp-for="Employee.Name" class="text-gray-800" data-toggle="tooltip" title="Enter the employee's full name">Name</label>
+               <input asp-for="Employee.Name" class="form-control">
+               <span asp-validation-for="Employee.Name" class="text-danger"></span>
+           </div>
             <div class="form-group">
                 <label asp-for="Employee.Salary" class="text-gray-800"></label>
                 <div class="input-group">
@@ -20,7 +20,9 @@
                 <span asp-validation-for="Employee.Salary" class="text-danger"></span>
             </div>
             <div class="from-group">
-                <label asp-for="Employee.Career" class="text-gray-800"></label>
+                <label asp-for="Employee.Career" class="text-gray-800">
+                    <i class="fas fa-briefcase"></i> Career
+                </label>
                 <input asp-for="Employee.Career" class="form-control">
                 <span asp-validation-for="Employee.Career" class="text-danger"></span>
             </div>
@@ -29,13 +31,13 @@
                 <input asp-for="Employee.Email" class="form-control">
                 <span asp-validation-for="Employee.Email" class="text-danger"></span>
             </div>
-             <div class="from-group">
-                <label asp-for="Employee.TagId" class="text-gray-800"></label>
-                 <select asp-for="Employee.TagId" asp-items="@Model.TagList" class="form-control">
-                     <option disabled selected>--Select Tags--</option>
-                 </select>
-                <span asp-validation-for="Employee.TagId" class="text-danger"></span>
-             </div>
+              <div class="from-group">
+                  <label asp-for="Employee.TagId" class="text-gray-800">Tags</label>
+                  <select asp-for="Employee.TagId" asp-items="@Model.TagList" class="form-control">
+                      <option disabled>--Select Tags--</option>
+                  </select>
+                  <span asp-validation-for="Employee.TagId" class="text-danger"></span>
+              </div>
             <div class="from-group">
                 <label class="text-gray-800">Created Time</label>
                 <input class="form-control" value="@Model.Employee.DateTime.ToString("MMM-dd-yy hh:mm tt")" readonly>
@@ -46,10 +48,12 @@
             <div class="profile-image">
                 <img src="@Model.Employee.imageUrl" alt="" id="profile-pic">
             </div>
-            <div class="form-group form-upload">
-                <input asp-for="Employee.imageUrl" name="file" type="file">
-                <label asp-for="Employee.imageUrl" class="btn-upload">Upload Image</label>
-            </div>
+           <div class="form-group form-upload">
+               <label for="fileInput" class="btn-upload">
+                   <i class="fas fa-camera"></i> Upload Image
+                   <input id="fileInput" asp-for="Employee.imageUrl" name="file" type="file" style="display: none;">
+               </label>
+           </div>
             <div class="row mx-5">
                 <div class="form-group mr-lg-5">
                     <label class="text-gray-800">Gender:</label><br>
@@ -100,37 +104,88 @@
 </form>
 
 <style>
-  .profile-image {
-    width: 200px;
-    height: 200px;
+.profile-image {
+    width: 250px;
+    height: 250px;
     margin: 0 auto 20px;
+    border-radius: 50%;
     overflow: hidden;
     background-color: #ccc;
     position: relative;
-  }
-  input[type="file"] {
-    display: none;
-  }
-  .btn-upload {
-    width: 50%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    text-align: center;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+ /* Remove display: none from input[type="file"] */
+ input[type="file"] {
+     position: absolute;
+     cursor: pointer;
+     padding-left: 5px;
+ }
+ 
+ /* Adjust styling of the upload button */
+ .btn-upload {
+     display: inline-block;
+     padding: 10px 20px;
+     background-color: #007bff;
+     color: #fff;
+     text-align: center;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+ 
+ .btn-upload:hover {
+     background-color: #0056b3;
+ }
+ 
+ .btn-upload i {
+     margin-right: 5px;
+ }
+
   .form-upload, 
   .row {
     display: flex;
     justify-content: space-around;
     font-size: large;
-  }
-</style>
+  } 
+ .form-check-input {
+   width: 18px;
+   height: 18px;
+ }
+
+ .form-check-label {
+   margin-left: 8px;
+ }
+   </style>
 
 @section Scripts{
     @{
+        <script>
+            document.getElementById('fileInput').addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                const reader = new FileReader();
+                const img = document.getElementById('profile-pic');
+                
+                reader.onload = function(e) {
+                    img.src = e.target.result;
+                }
+           
+                reader.readAsDataURL(file);
+            });
+        </script>
         <partial name="_ValidationScriptsPartial"/>
     }
 }

@@ -9753,7 +9753,9 @@ a.text-dark:hover, a.text-dark:focus {
   .badge {
     border: 1px solid #000;
   }
-  .table {
+  .text-align:left
+
+;ble {
     border-collapse: collapse !important;
   }
   .table td,

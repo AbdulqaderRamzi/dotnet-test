@@ -19,7 +19,7 @@ public class Employee{
     public string Email{ get; set; } = string.Empty;
     [DisplayName("Date")]
     public DateTime DateTime{ get; set; } = DateTime.Now;
-    public string imageUrl{ get; set; }
+    public string imageUrl{ get; set; } = string.Empty;
     [DisplayName("Tags")]
     public int TagId{ get; set; }
     [ForeignKey("TagId")]

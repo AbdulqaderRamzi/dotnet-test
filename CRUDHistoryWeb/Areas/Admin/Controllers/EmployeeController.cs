@@ -72,23 +72,7 @@ public class EmployeeController : Controller{
         return RedirectToAction(nameof(Index));
     }
 
-    
-    public IActionResult Delete(int? id){
-        var employee = _unitOfWork.Employee.Get(u  => u.Id == id);
-        if (!string.IsNullOrEmpty(employee.imageUrl)){
-            var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, employee.imageUrl.TrimStart('\\'));
-            if (System.IO.File.Exists(oldImagePath))
-                System.IO.File.Delete(oldImagePath);
-        }
-        _unitOfWork.Employee.Remove(employee);
-        _unitOfWork.Save();
-        TempData["success"] = "Employee deleted successfully";
-        return RedirectToAction(nameof(Index));
-    }
 
- 
-    
-    /*[HttpDelete]
     public IActionResult Delete(int? id){
         var employee = _unitOfWork.Employee.Get(u => u.Id == id);
         if (!string.IsNullOrEmpty(employee.imageUrl)){
@@ -96,16 +80,10 @@ public class EmployeeController : Controller{
             if (System.IO.File.Exists(oldImagePath))
                 System.IO.File.Delete(oldImagePath);
         }
+ 
         _unitOfWork.Employee.Remove(employee);
         _unitOfWork.Save();
-        TempData["success"] = "Employee was deleted successfully";
+        TempData["success"] = "Employee deleted successfully";
         return RedirectToAction(nameof(Index));
-    }*/
-
-    /*public IActionResult Delete(Employee employee){
-        _unitOfWork.Employee.Remove(employee);
-        _unitOfWork.Save();
-        TempData["success"] = "Employee is deleted successfully";
-        return RedirectToAction(nameof(Index));
-    }*/
+    }
 }

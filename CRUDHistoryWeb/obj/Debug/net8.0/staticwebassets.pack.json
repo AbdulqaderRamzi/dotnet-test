@@ -7493,6 +7493,26 @@
       "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\webRTC\\AgoraRTC_N-4.7.3.js",
+      "PackagePath": "staticwebassets\\webRTC\\AgoraRTC_N-4.7.3.js"
+    },
+    {
+      "Id": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\webRTC\\coverpic.jpg",
+      "PackagePath": "staticwebassets\\webRTC\\coverpic.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\webRTC\\index.html",
+      "PackagePath": "staticwebassets\\webRTC\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\webRTC\\main.css",
+      "PackagePath": "staticwebassets\\webRTC\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\webRTC\\main.js",
+      "PackagePath": "staticwebassets\\webRTC\\main.js"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CRUDHistoryWeb.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

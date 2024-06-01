@@ -14,3 +14,11 @@ C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\CR
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\CRUDHistory.Models.pdb
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\obj\Debug\net8.0\CRUDHistory.Utility.csproj.AssemblyReference.cache
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\obj\Debug\net8.0\CRUDHistory.Utility.csproj.CopyComplete
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Cookies.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Results.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.BearerToken.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistory.Utility\bin\Debug\net8.0\System.IO.Pipelines.dll

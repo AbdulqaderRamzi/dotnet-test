@@ -14,9 +14,11 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\LICENSE.md" />
       <_ContentIncludedByDefault Remove="Views\Employee\Create.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Employee\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="wwwroot\webRTC\css\main.css" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.5" />
       <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.1">
@@ -43,7 +45,12 @@
 
     <ItemGroup>
       <Folder Include="Areas\Employee\Conrollers\" />
+      <Folder Include="Views\webRTC\" />
       <Folder Include="wwwroot\images\employees" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\webRTC\index.html" />
     </ItemGroup>
 
 </Project>

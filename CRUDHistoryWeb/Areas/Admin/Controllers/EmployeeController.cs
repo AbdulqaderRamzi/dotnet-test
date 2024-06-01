@@ -1,13 +1,14 @@
 ﻿using CRUDHistory.DataAccess.Repository.IRepository;
-using CRUDHistory.Models;
 using CRUDHistory.Models.ViewsModels;
-using CRUDHistory.Models.ViewsModels;
+using CRUDHistory.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CRUDHistoryWeb.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = SD.HR_ROLE + "," + SD.ADMIN_ROLE)]
 public class EmployeeController : Controller{
     private readonly IUnitOfWork _unitOfWork;
     private readonly IWebHostEnvironment _webHostEnvironment;

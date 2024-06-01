@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUDHistoryWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2039d7e46168fda9295d9e951d87638c7c4a8454")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUDHistoryWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUDHistoryWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

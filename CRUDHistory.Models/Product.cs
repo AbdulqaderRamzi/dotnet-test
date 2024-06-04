@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace CRUDHistory.Models;
 
@@ -9,7 +10,8 @@ public class Product{
     public int? Price{ get; set; }
     public DateTime DateTime{ get; set; } = DateTime.Now;
 
-    public int EmployeeId{ get; set; }
+    /*public int EmployeeId{ get; set; }
     [ForeignKey("EmployeeId")]
-    public Employee Employee{ get; set; }// navigation property 
+    [ValidateNever]
+    public Employee Employee{ get; set; }// navigation property */
 }

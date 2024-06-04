@@ -3,5 +3,7 @@ public interface IUnitOfWork{
     IEmployeeRepository Employee { get; }
     IProductRepository Product { get; }
     ITagRepository Tag{ get; }
+    IApplicationUserRepository AppUser{ get; }
+    IActivityLogRepository ActivityLog { get; }
     void Save();
 }

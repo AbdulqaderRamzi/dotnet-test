@@ -15,8 +15,8 @@ public class Repository<T> : IRepository<T> where T : class {
         _dbSet = _db.Set<T>();
     }
 
-    public IEnumerable<T> GetAll(string? includeProperties = null){
-        IQueryable<T> query = _dbSet;
+    public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null){
+        IQueryable<T> query = filter is not null ? _dbSet.Where(filter) : _dbSet;
         if (!string.IsNullOrEmpty(includeProperties)){
             var properties = includeProperties.
                 Split(_splitor, StringSplitOptions.RemoveEmptyEntries);
@@ -27,8 +27,10 @@ public class Repository<T> : IRepository<T> where T : class {
         return query.ToList();
     }
 
-    public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null){
-        IQueryable<T> query = _dbSet;
+    public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null, bool isTracked = true){
+        IQueryable<T> query;
+        if (isTracked) query = _dbSet;
+        else query = _dbSet.AsNoTracking();
         query = query.Where(filter);
         if (!string.IsNullOrEmpty(includeProperties)){
             var properties = includeProperties.

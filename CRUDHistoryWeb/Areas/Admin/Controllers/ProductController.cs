@@ -22,7 +22,7 @@ public class ProductController : Controller{
             return View(new Product());
         var product = _unitOfWork.Product.Get(u => u.Id == id);
         return View(product);
-    }
+    }   
 
     [HttpPost]
     public IActionResult Upsert(Product product){
@@ -35,7 +35,7 @@ public class ProductController : Controller{
             _unitOfWork.Product.Update(product);
             TempData["success"] = "Product was updated successfully";
         }
-        _unitOfWork.Save();;
+        _unitOfWork.Save();
         return RedirectToAction(nameof(Index));
     }
     

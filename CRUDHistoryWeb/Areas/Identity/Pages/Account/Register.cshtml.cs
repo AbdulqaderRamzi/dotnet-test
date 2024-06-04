@@ -103,9 +103,15 @@ namespace CRUDHistoryWeb.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
-
-            public string Role{ get; set; } = string.Empty;
+            
+            [Required]
+            public string Role{ get; set; }
             public IEnumerable<SelectListItem> RoleList { get; set; }
+
+            [Required]
+            public string FirstName{ get; set; }
+            [Required]
+            public string LastName{ get; set; }
 
         }
 
@@ -141,6 +147,8 @@ namespace CRUDHistoryWeb.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                user.FirstName = Input.FirstName;
+                user.LastName= Input.LastName;
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)

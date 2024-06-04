@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qOpKu6K+0AUbXv66HbX78xS4My0aDO5Pkf3o2+8tq28=",
+  "Hash": "1hWKPtwjTK8iyFxD2hUe0Eis8GVW0SsBDkAGt6f8XEg=",
   "Source": "CRUDHistoryWeb",
   "BasePath": "_content/CRUDHistoryWeb",
   "Mode": "Default",
@@ -1326,6 +1326,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\employees\\477255c9-602c-41ed-94b5-107e8ca71335.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\images\\employees\\4f68d834-2c45-48b3-8459-563a75af9a3c.jpg",
+      "SourceId": "CRUDHistoryWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\",
+      "BasePath": "_content/CRUDHistoryWeb",
+      "RelativePath": "images/employees/4f68d834-2c45-48b3-8459-563a75af9a3c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\employees\\4f68d834-2c45-48b3-8459-563a75af9a3c.jpg"
     },
     {
       "Identity": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\images\\employees\\592e6424-f817-4c83-b6fd-a5720457f4bb.jpg",

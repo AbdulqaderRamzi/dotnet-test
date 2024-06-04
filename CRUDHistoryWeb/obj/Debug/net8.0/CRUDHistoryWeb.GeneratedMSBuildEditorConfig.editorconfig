@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRl
 build_metadata.AdditionalFiles.CssScope = 
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/abood/RiderProjects/CRUDHistory/CRUDHistoryWeb/Areas/Admin/Views/ActivityLog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWN0aXZpdHlMb2dcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/abood/RiderProjects/CRUDHistory/CRUDHistoryWeb/Areas/Admin/Views/EmailData/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxEYXRhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -192,6 +196,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/abood/RiderProjects/CRUDHistory/CRUDHistoryWeb/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abood/RiderProjects/CRUDHistory/CRUDHistoryWeb/Areas/Identity/Pages/Account/Manage/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/abood/RiderProjects/CRUDHistory/CRUDHistoryWeb/Areas/Identity/Pages/Account/Register.cshtml]

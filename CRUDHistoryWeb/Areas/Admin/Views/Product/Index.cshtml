@@ -25,7 +25,7 @@
                         <th>Name</th>
                         <th>Type</th>
                         <th>Price</th>
-                        <th>Employee</th>
+                        @*<th>Employee</th>*@
                         <th>Date</th>
                         <th>Actions</th>
                     </tr>
@@ -35,7 +35,7 @@
                        <th>Name</th>
                        <th>Type</th>
                        <th>Price</th>
-                       <th>Employee</th>
+                       @*<th>Employee</th>*@
                        <th>Date</th>
                        <th>Actions</th>
                     </tr>
@@ -46,7 +46,7 @@
                             <td>@product.Name</td>
                             <td>@product.Type</td>
                             <td>@product.Price</td>
-                            <td>@product.Employee.Name</td>
+                            @*<td>@product.Employee.Name</td>*@
                             <td>@product.DateTime.ToString("MMM-dd-yy hh:mm tt")</td>
                             <td>
                                 <div class="dropdown">
@@ -62,7 +62,7 @@
                                             onmouseout="this.style.backgroundColor=''; this.style.color='';">
                                             <i class="fas fa-info-circle"></i> Details
                                         </a>
-                                        <a class="dropdown-item" asp-controller="Employee" asp-action="Upsert" asp-route-id="@product.Id"
+                                        <a class="dropdown-item" asp-controller="Product" asp-action="Upsert" asp-route-id="@product.Id"
                                             onmouseover="this.style.backgroundColor='#5cb85e'; this.style.color='white';"
                                             onmouseout="this.style.backgroundColor=''; this.style.color='';">
                                             <i class="fas fa-edit"></i> Update

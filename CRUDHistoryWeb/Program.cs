@@ -28,6 +28,7 @@ builder.Services.AddCors(opt => {
 // crosssiteattac
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddDbContext<ApplicationDbContext>(
     options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 

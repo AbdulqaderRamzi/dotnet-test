@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUDHistory.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fb0ec0710a0a2f17ea49f279d8c8015d295dd9d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+161e4b2f0c198fe0ca27f979aa8b0643a5c396af")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUDHistory.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUDHistory.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

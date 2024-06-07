@@ -9,6 +9,8 @@ public class ActivityLog {
     [ForeignKey("ApplicationUserId")]
     [ValidateNever]
     public ApplicationUser ApplicationUser{ get; set; }
+    [NotMapped]
+    public string ApplicationUserName{ get; set; } = string.Empty;
     public required string EntityType { get; set; }
     public required string Action { get; set; }
     public required DateTime TimeStamp { get; set; }

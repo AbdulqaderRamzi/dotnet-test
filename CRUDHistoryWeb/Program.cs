@@ -13,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+/*
 builder.Services.AddCors(opt => {
     opt.AddPolicy("reactApp", policyBuilder => {
         policyBuilder.WithOrigins("http://localhost:3000")
@@ -21,6 +22,7 @@ builder.Services.AddCors(opt => {
             .AllowCredentials();
     });
 });
+*/
 
 
 // keyclock
@@ -45,9 +47,11 @@ builder.Services.AddScoped<Microsoft.AspNetCore.Identity.UI.Services.IEmailSende
 builder.Services.AddSignalR();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddRazorPages();
-/*builder.Services.AddMvc().AddRazorPagesOptions(options => {
+/*
+builder.Services.AddMvc().AddRazorPagesOptions(options => {
     options.Conventions.AddAreaPageRoute("Identity", "/Account/Login", "");
-});*/
+});
+*/
 
 
 
@@ -78,8 +82,6 @@ app.MapControllerRoute(
 
 
 // end-point
-app.MapHub<ChatHub>("/Chat");
-
-app.UseCors("reactApp");
+app.MapHub<ChatHub>("/chatHub");
 
 app.Run();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1hWKPtwjTK8iyFxD2hUe0Eis8GVW0SsBDkAGt6f8XEg=",
+  "Hash": "wXF8hB2Pn+2rPTB7pXGyCSZx2SAgnnmve7y9BK5E3UI=",
   "Source": "CRUDHistoryWeb",
   "BasePath": "_content/CRUDHistoryWeb",
   "Mode": "Default",
@@ -1649,6 +1649,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\sb-admin-2.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\js\\signalr.js",
+      "SourceId": "CRUDHistoryWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\",
+      "BasePath": "_content/CRUDHistoryWeb",
+      "RelativePath": "js/signalr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signalr.js"
     },
     {
       "Identity": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\scss\\_buttons.scss",

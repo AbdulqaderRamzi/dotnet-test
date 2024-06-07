@@ -1,6 +1,10 @@
-﻿namespace CRUDHistory.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CRUDHistory.Models;
 
 public class UserConnection{
-    public string Username{ get; set; } = string.Empty;
-    public string ChatRoom{ get; set; } = string.Empty;
+    [Required]
+    public string? Username{ get; set; } 
+    [Required]
+    public string ChatRoom{ get; set; } 
 }

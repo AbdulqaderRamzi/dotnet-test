@@ -101,6 +101,10 @@
       "PackagePath": "staticwebassets\\js\\sb-admin-2.min.js"
     },
     {
+      "Id": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\js\\signalr.js",
+      "PackagePath": "staticwebassets\\js\\signalr.js"
+    },
+    {
       "Id": "C:\\Users\\abood\\RiderProjects\\CRUDHistory\\CRUDHistoryWeb\\wwwroot\\scss\\_buttons.scss",
       "PackagePath": "staticwebassets\\scss\\_buttons.scss"
     },

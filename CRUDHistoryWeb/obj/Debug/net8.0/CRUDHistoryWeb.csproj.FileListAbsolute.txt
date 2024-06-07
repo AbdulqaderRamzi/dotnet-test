@@ -255,3 +255,9 @@ C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\refint\
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\CRUDHistoryWeb.pdb
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\CRUDHistoryWeb.genruntimeconfig.cache
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\ref\CRUDHistoryWeb.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Owin.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Owin.Security.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Owin.dll

@@ -5,5 +5,6 @@ public interface IUnitOfWork{
     ITagRepository Tag{ get; }
     IApplicationUserRepository AppUser{ get; }
     IActivityLogRepository ActivityLog { get; }
+    IUserToUserMessagingRepository UserMessage { get; }
     void Save();
 }

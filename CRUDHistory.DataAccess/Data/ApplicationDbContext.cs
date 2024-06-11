@@ -18,6 +18,7 @@ public class ApplicationDbContext : IdentityDbContext<IdentityUser>{
     public DbSet<Tag> Tags{ get; set; }
     public DbSet<ApplicationUser> ApplicationUsers{ get; set; }
     public DbSet<ActivityLog> ActivityLogs{ get; set; }
+    public DbSet<Message> Messages{ get; set; }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IHttpContextAccessor httpContextAccessor) 
         : base(options){

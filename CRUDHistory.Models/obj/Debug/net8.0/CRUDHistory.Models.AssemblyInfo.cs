@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUDHistory.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+161e4b2f0c198fe0ca27f979aa8b0643a5c396af")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c73d9fa0984329ad966fde8d0ccc77e94b3dddd")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUDHistory.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUDHistory.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

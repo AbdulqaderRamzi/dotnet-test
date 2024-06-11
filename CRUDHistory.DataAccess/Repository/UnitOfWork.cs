@@ -10,6 +10,7 @@ public class UnitOfWork : IUnitOfWork{
     public ITagRepository Tag{ get; }
     public IApplicationUserRepository AppUser { get; }
     public IActivityLogRepository ActivityLog{ get; }
+    public IUserToUserMessagingRepository UserMessage{ get; }
     public UnitOfWork(ApplicationDbContext db){
         _db = db;
         Employee = new EmployeeRepository(_db);
@@ -17,6 +18,7 @@ public class UnitOfWork : IUnitOfWork{
         Tag = new TagRepository(_db);
         AppUser = new ApplicationUserRepository(_db);
         ActivityLog = new ActivityLogRepository(_db);
+        UserMessage = new UserToUserMessagingRepository(_db);
     }
     
     public void Save() => _db.SaveChanges();

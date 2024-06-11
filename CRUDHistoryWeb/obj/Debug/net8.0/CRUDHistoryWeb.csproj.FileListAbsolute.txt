@@ -7,6 +7,8 @@ C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\CRUDHis
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\CRUDHistoryWeb.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\CRUDHistoryWeb.pdb
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Humanizer.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.AspNet.SignalR.SystemWeb.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -46,6 +48,9 @@ C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microso
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Owin.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Owin.Security.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
@@ -67,6 +72,7 @@ C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\NuGet.P
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\NuGet.ProjectModel.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\NuGet.Protocol.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\NuGet.Versioning.dll
+C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Owin.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\System.Composition.AttributedModel.dll
@@ -255,9 +261,3 @@ C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\refint\
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\CRUDHistoryWeb.pdb
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\CRUDHistoryWeb.genruntimeconfig.cache
 C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\obj\Debug\net8.0\ref\CRUDHistoryWeb.dll
-C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Core.dll
-C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.AspNet.SignalR.SystemWeb.dll
-C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Owin.dll
-C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Microsoft.Owin.Security.dll
-C:\Users\abood\RiderProjects\CRUDHistory\CRUDHistoryWeb\bin\Debug\net8.0\Owin.dll

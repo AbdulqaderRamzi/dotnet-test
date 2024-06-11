@@ -57,6 +57,7 @@ builder.Services.AddMvc().AddRazorPagesOptions(options => {
 
 var app = builder.Build();
 
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()){
     app.UseExceptionHandler("/Home/Error");
@@ -75,9 +76,15 @@ app.MapRazorPages();
 
 
 
+/*app.MapControllerRoute(
+    name: "default",
+    pattern: "{area=Admin}/{controller=Home}/{action=Index}/{id?}");*/
+    
 app.MapControllerRoute(
     name: "default",
-    pattern: "{area=Admin}/{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area=Admin}/{controller=Home}/{action=Welcome}/{id?}");
+
+
 
 
 

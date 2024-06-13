@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CRUDHistory.Models;
 
-public class ApplicationUser : IdentityUser{
+public class ApplicationUser : IdentityUser {
     [Required] 
     public string FirstName{ get; set; }
     [Required] 

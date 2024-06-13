@@ -1,6 +1,4 @@
 ﻿using CRUDHistory.DataAccess.Data;
-using CRUDHistory.DataAccess.Repository.IRepository;
-using CRUDHistory.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CRUDHistoryWeb.ViewComponents;
@@ -14,7 +12,7 @@ public class MessageViewComponent : ViewComponent{
     public async Task<IViewComponentResult> InvokeAsync(string? receiverEmail)
     {
         var messages = await _db.Messages
-            .Where(m => m.RecipientEmail == receiverEmail).Include("applicationUser")
+            .Where(m => m.RecipientEmail == receiverEmail && !m.Seen).Include("applicationUser")
             .OrderByDescending(m => m.SentAt).ToListAsync();
         return View(messages);
     }

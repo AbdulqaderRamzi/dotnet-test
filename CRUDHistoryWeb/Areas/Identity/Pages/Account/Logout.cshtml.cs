@@ -4,6 +4,7 @@
 
 using System;
 using System.Threading.Tasks;
+using CRUDHistory.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +27,7 @@ namespace CRUDHistoryWeb.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
             await _signInManager.SignOutAsync();
+            HttpContext.Session.Remove(SD.SESSION_MESSAGE);
             _logger.LogInformation("User logged out.");
             if (returnUrl != null)
             {

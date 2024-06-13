@@ -1,6 +1,7 @@
 ﻿using System.Security.Claims;
 using CRUDHistory.DataAccess.Repository.IRepository;
 using CRUDHistory.Models;
+using CRUDHistory.Utility;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,6 +27,7 @@ public class UserToUserMessagingController : Controller{
         var claimsIdentity = (ClaimsIdentity)User.Identity;
         var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
         message.SenderId = userId;
+        message.Seen = false;
         message.RecipientEmail = message.RecipientEmail.ToLower().Trim();
         _unitOfWork.UserMessage.Add(message);
         _unitOfWork.Save();

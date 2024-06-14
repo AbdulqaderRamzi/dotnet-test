@@ -6,5 +6,6 @@ public interface IUnitOfWork{
     IApplicationUserRepository AppUser{ get; }
     IActivityLogRepository ActivityLog { get; }
     IUserToUserMessagingRepository UserMessage { get; }
+    ICheckBoxRepository CheckBox { get; }
     void Save();
 }

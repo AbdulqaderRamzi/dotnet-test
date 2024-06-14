@@ -11,6 +11,7 @@ public class UnitOfWork : IUnitOfWork{
     public IApplicationUserRepository AppUser { get; }
     public IActivityLogRepository ActivityLog{ get; }
     public IUserToUserMessagingRepository UserMessage{ get; }
+    public ICheckBoxRepository CheckBox{ get; }
     public UnitOfWork(ApplicationDbContext db){
         _db = db;
         Employee = new EmployeeRepository(_db);
@@ -19,6 +20,7 @@ public class UnitOfWork : IUnitOfWork{
         AppUser = new ApplicationUserRepository(_db);
         ActivityLog = new ActivityLogRepository(_db);
         UserMessage = new UserToUserMessagingRepository(_db);
+        CheckBox = new CheckBoxRepository(_db);
     }
     
     public void Save() => _db.SaveChanges();

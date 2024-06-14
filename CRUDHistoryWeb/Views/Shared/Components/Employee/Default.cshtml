@@ -1,3 +1,9 @@
 ﻿@model string
 
 <span class="mr-2 d-none d-lg-inline text-gray-600 small">@string.Concat("Hello, ", Model, "!")</span>
+@*<span class="mr-2 d-none d-lg-inline text-gray-600 small">
+    @{
+        var greeting = "Hello " + Model + "!";
+    }
+    @greeting
+</span>*@

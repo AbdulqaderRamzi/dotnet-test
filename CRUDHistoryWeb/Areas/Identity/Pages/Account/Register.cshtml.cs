@@ -4,6 +4,7 @@
 #nullable disable
 
 using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,6 +12,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
+using CRUDHistory.DataAccess.Repository.IRepository;
 using CRUDHistory.Models;
 using CRUDHistory.Utility;
 using Microsoft.AspNetCore.Authentication;
@@ -34,6 +36,7 @@ public class RegisterModel : PageModel{
     private readonly ILogger<RegisterModel> _logger;
     private readonly IEmailSender _emailSender;
     private readonly IWebHostEnvironment _webHostEnvironment;
+    private readonly IUnitOfWork _unitOfWork;
 
 
     public RegisterModel(
@@ -43,6 +46,7 @@ public class RegisterModel : PageModel{
         SignInManager<IdentityUser> signInManager,
         ILogger<RegisterModel> logger,
         IEmailSender emailSender, 
+        IUnitOfWork unitOfWork,
         IWebHostEnvironment webHostEnvironment){
         _userManager = userManager;
         _roleManager = roleManager;
@@ -52,6 +56,7 @@ public class RegisterModel : PageModel{
         _logger = logger;
         _emailSender = emailSender;
         _webHostEnvironment = webHostEnvironment;
+        _unitOfWork = unitOfWork;
     }
 
     /// <summary>
@@ -121,7 +126,7 @@ public class RegisterModel : PageModel{
         [Required] 
         public string Gender { get; set; }
 
-        public string Languages{ get; set; } = string.Empty;
+        public List<CheckBox> LanguagesOptions { get; set; }
         [Required]
         [Phone]
         [Display(Name = "Phone Number")]
@@ -149,14 +154,20 @@ public class RegisterModel : PageModel{
             RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem{
                 Text = i,
                 Value = i
-            })
+            }), 
+            LanguagesOptions =[
+                new CheckBox{ Value = "English", isChecked = false },
+                new CheckBox{ Value = "Arabic", isChecked = false },
+                new CheckBox{ Value = "Spanish", isChecked = false },
+                new CheckBox{ Value = "French", isChecked = false }
+            ]
         };
 
         ReturnUrl = returnUrl;
         ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
     }
 
-    public async Task<IActionResult> OnPostAsync(IFormFile file, string returnUrl = null){
+    public async Task<IActionResult> OnPostAsync(IFormFile file, List<string> languages, string returnUrl = null){
         returnUrl ??= Url.Content("~/");
         ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         if (ModelState.IsValid){
@@ -170,7 +181,7 @@ public class RegisterModel : PageModel{
             user.Career = Input.Career;
             user.Salary = Input.Salary;
             user.Gender = Input.Gender;
-            //user.Languages.AddRange(Input.Languages);
+            /*user.Languages = string.Join(", ", languages);*/
             user.City = Input.City;
             user.State = Input.State;
             user.StreetAddress = Input.StreetAddress;
@@ -194,8 +205,17 @@ public class RegisterModel : PageModel{
                 Input.ImageUrl = @"\images\employees\" + fileName;
             }
             user.ImageUrl = Input.ImageUrl;
+            foreach (var lang in languages){
+                var checkbox = new CheckBox{
+                    Value = lang, 
+                    isChecked = true, 
+                    EmployeeId = user.Id
+                };
+                _unitOfWork.CheckBox.Add(checkbox);
+            }
             
             var result = await _userManager.CreateAsync(user, Input.Password);
+            _unitOfWork.Save();
 
             if (result.Succeeded){
                 _logger.LogInformation("User created a new account with password.");
@@ -211,7 +231,6 @@ public class RegisterModel : PageModel{
 
                 await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                     $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
                 if (_userManager.Options.SignIn.RequireConfirmedAccount){
                     return RedirectToPage("RegisterConfirmation", new{ email = Input.Email, returnUrl = returnUrl });
                 }

@@ -61,6 +61,32 @@ namespace CRUDHistory.DataAccess.Migrations
                     b.ToTable("ActivityLogs");
                 });
 
+            modelBuilder.Entity("CRUDHistory.Models.CheckBox", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("EmployeeId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("isChecked")
+                        .HasColumnType("tinyint(1)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.ToTable("CheckBoxes");
+                });
+
             modelBuilder.Entity("CRUDHistory.Models.Employee", b =>
                 {
                     b.Property<int>("Id")
@@ -414,10 +440,6 @@ namespace CRUDHistory.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Language")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -440,6 +462,17 @@ namespace CRUDHistory.DataAccess.Migrations
                     b.HasOne("CRUDHistory.Models.ApplicationUser", "ApplicationUser")
                         .WithMany()
                         .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("CRUDHistory.Models.CheckBox", b =>
+                {
+                    b.HasOne("CRUDHistory.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

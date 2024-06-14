@@ -19,18 +19,21 @@ public class ApplicationDbContext : IdentityDbContext<IdentityUser>{
     public DbSet<ApplicationUser> ApplicationUsers{ get; set; }
     public DbSet<ActivityLog> ActivityLogs{ get; set; }
     public DbSet<Message> Messages{ get; set; }
+    public DbSet<CheckBox> CheckBoxes{ get; set; }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IHttpContextAccessor httpContextAccessor) 
         : base(options){
         _httpContextAccessor = httpContextAccessor;
     }
     
-    /*protected override void OnModelCreating(ModelBuilder modelBuilder){
-        modelBuilder.Entity<Employee>().HasData(
+    /*
+    protected override void OnModelCreating(ModelBuilder modelBuilder){
+        modelBuilder.Entity<>().HasData(
             new Employee(){ Id = 1, Name = "Hosam", Salary = 200 },
             new Employee(){ Id = 2, Name = "Khaled", Salary = 150 }
         );
-    }*/
+    }
+    */
 
     public override int SaveChanges(){
         var modifiedEntries = ChangeTracker
@@ -42,6 +45,9 @@ public class ApplicationDbContext : IdentityDbContext<IdentityUser>{
         var claimsIdentity = (ClaimsIdentity) _httpContextAccessor.HttpContext.User.Identity;
         var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
         foreach (var entity in modifiedEntries){
+            /*if (entity.Entity.GetType().ToString().Equals("CheckBox")) {
+                continue;
+            }*/
             var updates = GetUpdate(entity);
             if (updates.Count == 0) 
                 updates.Add(["", "", ""]);

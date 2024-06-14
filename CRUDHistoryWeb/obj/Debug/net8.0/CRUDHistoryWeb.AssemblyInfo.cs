@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUDHistoryWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0f897146a3b9ebc167f96c61034db4336783b3a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUDHistoryWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUDHistoryWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

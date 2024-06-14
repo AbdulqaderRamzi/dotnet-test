@@ -16,8 +16,7 @@ public class ApplicationUser : IdentityUser {
     public string Gender { get; set; }
     [Required]
     public int Salary{ get; set; }
-
-    public string Language{ get; set; } = string.Empty; 
+    /*public string Languages { get; set; }*/
     [Required]
     [Phone]
     [Display(Name = "Phone Number")]
